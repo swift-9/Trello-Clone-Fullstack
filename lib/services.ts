@@ -1,5 +1,5 @@
-import { SupabaseClient } from "@supabase/supabase-js";
 import { Board, Column, Task } from "./supabase/models";
+import { SupabaseClient } from "@supabase/supabase-js";
 
 export const boardService = {
   async getBoard(supabase: SupabaseClient, boardId: string): Promise<Board> {
@@ -76,12 +76,7 @@ export const columnService = {
 
   async createColumn(
     supabase: SupabaseClient,
-    column: {
-      title: string;
-      board_id: string;
-      sort_order: number;
-      user_id?: string;
-    }
+    column: Omit<Column, "id" | "created_at">
   ): Promise<Column> {
     const { data, error } = await supabase
       .from("columns")

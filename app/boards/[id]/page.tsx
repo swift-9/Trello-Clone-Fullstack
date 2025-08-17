@@ -7,7 +7,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
@@ -23,6 +22,10 @@ import {
 import { Textarea } from "@/components/ui/textarea";
 import { useBoard } from "@/lib/hooks/useBoards";
 import { ColumnWithTasks, Task } from "@/lib/supabase/models";
+import { DialogTrigger } from "@radix-ui/react-dialog";
+import { Calendar, MoreHorizontal, Plus, Pointer, User } from "lucide-react";
+import { useParams } from "next/navigation";
+import { useState } from "react";
 import {
   DndContext,
   DragEndEvent,
@@ -41,10 +44,6 @@ import {
   verticalListSortingStrategy,
 } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
-import { DialogTrigger } from "@radix-ui/react-dialog";
-import { Calendar, MoreHorizontal, Plus, User } from "lucide-react";
-import { useParams } from "next/navigation";
-import { useState } from "react";
 
 function DroppableColumn({
   column,
@@ -108,7 +107,7 @@ function DroppableColumn({
             <DialogContent className="w-[95vw] max-w-[425px] mx-auto">
               <DialogHeader>
                 <DialogTitle>Create New Task</DialogTitle>
-                <DialogDescription>Add a task to the board</DialogDescription>
+                <p className="text-sm text-gray-600">Add a task to the board</p>
               </DialogHeader>
 
               <form className="space-y-4" onSubmit={onCreateTask}>
@@ -586,7 +585,6 @@ export default function BoardPage() {
           <DialogContent className="w-[95vw] max-w-[425px] mx-auto">
             <DialogHeader>
               <DialogTitle>Edit Board</DialogTitle>
-              <DialogDescription>Update your board settings</DialogDescription>
             </DialogHeader>
             <form className="space-y-4" onSubmit={handleUpdateBoard}>
               <div className="space-y-2">
@@ -625,7 +623,6 @@ export default function BoardPage() {
                           ? "ring-2 ring-offset-2 ring-gray-900"
                           : ""
                       } `}
-                      aria-label={`Select ${color} color`}
                       onClick={() => setNewColor(color)}
                     />
                   ))}
@@ -650,9 +647,9 @@ export default function BoardPage() {
           <DialogContent className="w-[95vw] max-w-[425px] mx-auto">
             <DialogHeader>
               <DialogTitle>Filter Tasks</DialogTitle>
-              <DialogDescription>
+              <p className="text-sm text-gray-600">
                 Filter tasks by priority, assignee, or due date
-              </DialogDescription>
+              </p>
             </DialogHeader>
             <div className="space-y-4">
               <div className="space-y-2">
@@ -732,9 +729,9 @@ export default function BoardPage() {
               <DialogContent className="w-[95vw] max-w-[425px] mx-auto">
                 <DialogHeader>
                   <DialogTitle>Create New Task</DialogTitle>
-                  <DialogDescription>
+                  <p className="text-sm text-gray-600">
                     Add a task to the board
-                  </DialogDescription>
+                  </p>
                 </DialogHeader>
 
                 <form className="space-y-4" onSubmit={handleCreateTask}>
@@ -853,9 +850,9 @@ export default function BoardPage() {
         <DialogContent className="w-[95vw] max-w-[425px] mx-auto">
           <DialogHeader>
             <DialogTitle>Create New Column</DialogTitle>
-            <DialogDescription>
-              Add a new column to organize your tasks
-            </DialogDescription>
+            <p className="text-sm text-gray-600">
+              Add new column to organize your tasks
+            </p>
           </DialogHeader>
           <form className="space-y-4" onSubmit={handleCreateColumn}>
             <div className="space-y-2">
@@ -886,9 +883,9 @@ export default function BoardPage() {
         <DialogContent className="w-[95vw] max-w-[425px] mx-auto">
           <DialogHeader>
             <DialogTitle>Edit Column</DialogTitle>
-            <DialogDescription>
+            <p className="text-sm text-gray-600">
               Update the title of your column
-            </DialogDescription>
+            </p>
           </DialogHeader>
           <form className="space-y-4" onSubmit={handleUpdateColumn}>
             <div className="space-y-2">

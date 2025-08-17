@@ -1,15 +1,9 @@
 ---
 
-# Build a Trello Clone App with Next.js & Supabase
+# Trello Clone App with Next.js & Supabase
 
 <div align="center">
-  <br />
-  <h1> Trello Clone</h1>
 
-   <p><i>A modern Kanban-style task management app built with Next.js, Prisma, and Clerk.</i></p>
-
-  </a>
-  <br />
   <div>
     <img src="https://img.shields.io/badge/-Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js" />
     <img src="https://img.shields.io/badge/-Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white" alt="Supabase" />
@@ -17,8 +11,8 @@
     <img src="https://img.shields.io/badge/-@dnd--kit-FAB005?style=for-the-badge&logo=react&logoColor=white" alt="dnd-kit" />
     <img src="https://img.shields.io/badge/-TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss" alt="Tailwind CSS" />
   </div>
-  <h3 align="center">Build a Trello‑Style App with Next.js, Supabase, Clerk & dnd‑kit</h3>
-
+  <h3 align="center">Trello‑Style App with Next.js, Supabase, Clerk & dnd‑kit</h3>
+ 
   <br />
 </div>
 

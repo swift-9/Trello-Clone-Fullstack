@@ -1,14 +1,14 @@
 "use client";
 
 import { useUser } from "@clerk/nextjs";
-import { useEffect, useState } from "react";
 import {
   boardDataService,
   boardService,
   columnService,
   taskService,
 } from "../services";
-import { Board, ColumnWithTasks, Task } from "../supabase/models";
+import { useEffect, useState } from "react";
+import { Board, Column, ColumnWithTasks, Task } from "../supabase/models";
 import { useSupabase } from "../supabase/SupabaseProvider";
 
 export function useBoards() {
