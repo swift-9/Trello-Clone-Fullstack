@@ -70,9 +70,9 @@ A production‑ready **Trello‑Style App** using **Next.js**, **Supabase**, **C
 ---
 ## 🖼️ Screenshots
 
-> 📸 Add screenshots of your Hero section, Projects grid, and Contact form here to show off your site.
+> 📸 
 
-## <div><img src="/trello.png" alt="Screenshot" /></div>
+## <div><img src="trello.png" alt="Screenshot" /></div>
 
 ---
 
