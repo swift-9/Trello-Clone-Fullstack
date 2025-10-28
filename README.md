@@ -72,7 +72,7 @@ A production‑ready **Trello‑Style App** using **Next.js**, **Supabase**, **C
 
 > 📸 
 
-## <div><img src="trello.png" alt="Screenshot" /></div>
+## <div><img src="Trello.png" alt="Screenshot" /></div>
 
 ---
 
