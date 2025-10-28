@@ -68,6 +68,13 @@ A production‑ready **Trello‑Style App** using **Next.js**, **Supabase**, **C
   Deploy the app on Vercel with environment variables for Supabase & Clerk.
 
 ---
+## 🖼️ Screenshots
+
+> 📸 Add screenshots of your Hero section, Projects grid, and Contact form here to show off your site.
+
+## <div><img src="/trello.png" alt="Screenshot" /></div>
+
+---
 
 ## 👌 Quick Start
 
